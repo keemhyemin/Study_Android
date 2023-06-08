@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#86E307"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="버튼1"
+            android:background="#123"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp" />
+
+       <Button
+           android:text="버튼2"
+           android:background="#123"
+           android:layout_weight="0.2"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:layout_margin="7dp"/>
+
+        <Button
+            android:text="버튼3"
+            android:background="#123"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#EEFF45"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+       <Button
+           android:text="버튼"
+           android:layout_margin="5dp"
+           android:background="#123"
+           android:layout_weight="0.3"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="버튼"
+            android:layout_margin="5dp"
+            android:background="#123"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#C473F6"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <Button
+               android:text="버튼"
+               android:background="#123"
+               android:layout_weight="0.25"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="0dp" />
+           <Button
+               android:text="버튼"
+               android:background="#123"
+               android:layout_weight="0.25"
+               android:layout_marginBottom="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"/>
+           <Button
+               android:text="버튼"
+               android:background="#123"
+               android:layout_weight="0.25"
+               android:layout_marginBottom="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"/>
+           <Button
+               android:text="버튼"
+               android:background="#123"
+               android:layout_weight="0.25"
+               android:layout_marginBottom="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"/>
+       </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <Button
+            android:text="버튼"
+            android:background="#123"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

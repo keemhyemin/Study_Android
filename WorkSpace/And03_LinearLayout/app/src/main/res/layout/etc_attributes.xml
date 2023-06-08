@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_margin="10dp"
+        android:text="마진"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginLeft="100dp"
+        android:text="마진 왼쪽"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:padding="20dp"
+        android:text="패딩"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:paddingLeft="40dp"
+        android:text="패딩 왼쪽"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:visibility="invisible"
+        android:text="가시성"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:visibility="visible"
+        android:text="가시성2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- 내부에 자식요소를 정렬하는 방식 -->
+    <Button
+        android:gravity="right"
+        android:visibility="visible"
+        android:text="그래비티"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#8C97A3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <Button
+            android:background="#123"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

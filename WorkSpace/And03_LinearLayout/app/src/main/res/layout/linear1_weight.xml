@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <!-- 리니어 레이아웃 (모든 레이아웃) 내부에 오는 모든 것들은
+         부모 태그인 리니어 레이아웃의 규칙을 따른다. -->
+
+    <RelativeLayout
+        android:background="#878585"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:background="#DC9B9B"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

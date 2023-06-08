@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relativelayout"
+        android:textSize="20dp"
+        android:textColor="#888888"/>
+
+    <ImageView
+        android:layout_below="@id/tv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="버튼1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_below="@id/btn1"
+        android:layout_alignLeft="@id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼2"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_below="@id/btn2"
+        android:layout_alignLeft="@id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼3"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_toRightOf="@id/btn1"
+        android:layout_alignTop="@id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼4"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_below="@id/btn4"
+        android:layout_toRightOf="@id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼5"/>
+
+    <Button
+        android:layout_below="@id/btn5"
+        android:layout_toRightOf="@id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼6"/>
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_toLeftOf="@id/btn1"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼7"/>
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_below="@id/btn7"
+        android:layout_toLeftOf="@id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼8"/>
+
+    <Button
+        android:layout_below="@id/btn8"
+        android:layout_toLeftOf="@id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼9"/>
+
+</RelativeLayout>
