@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 위젯의 크기같은 속상은 dimen이라는 태그를 이용해서 준다.
+    <!-- 위젯의 크기같은 속성은 dimen이라는 태그를 이용해서 준다.
         ex) TextView가 여러개 나오는데 넓이와 높이가 같을 때 매번 하나씩 dp로 주는게 아니라
         dimen을 이용해서 변수로 사용하면 공통으로 바꾸는게 매우 빠르다.
     -->
@@ -11,18 +11,19 @@
          주의사항 : layout.xml에 넣을 수 없는 값이나 오류코드는 똑같이 오류를 발생시킨다.
          만들 때는 하나를 잘 만들어놓고 sytle로 하나씩 복붙을 하면서 이동을 시키고 사용하면 된다.
     -->
+    <color name="ln_tv_color">#887766</color>
     <style name="values_ln_tv_style">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:background">#887766</item>
+        <item name="android:background">@color/ln_tv_color</item>
     </style>
     <!-- 스타일이 이미 만들어진것을 재사용함. (상속) -->
+    <color name="ln_tv_color2">#654321</color>
     <style name="values_ln_tv_style2" parent="values_ln_tv_style">
         <item name="android:textSize">30dp</item>
-        <item name="android:textColor">#654321</item>
+        <item name="android:textColor">@color/ln_tv_color2</item>
     </style>
-
 
 
 </resources>
