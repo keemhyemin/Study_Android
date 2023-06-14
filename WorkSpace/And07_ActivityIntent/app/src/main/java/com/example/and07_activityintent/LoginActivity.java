@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
     EditText et1, et2;
     Button btn;
@@ -38,8 +41,23 @@ public class LoginActivity extends AppCompatActivity {
                 // => 일반 클래스에서도 그래픽 처리가 가능하게 만드려면 Activity가 Context라는 것을 파라메터로 보내줬을 때 가능함.
                 id = et1.getText().toString();
                 pw = et2.getText().toString();
-                if(id != null && pw != null && id.equals("admin") && pw.equals("admin1234")) {
+                if(id.equals("admin") && pw.equals("admin1234")) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("strkey", id + "intent");
+                    intent.putExtra("intkey", 10);
+
+                    LoginDTO dto = new LoginDTO(id +"1", pw + "1");
+                    intent.putExtra("dtokey", dto);
+
+                    // LoginDTO를 5개 아무 데이터나 넣고 묶은 ArrayList 만들어보기
+                    ArrayList<LoginDTO> dtoList = new ArrayList<>(); // 초기화 식. LoginDTO타입을 묶어놓을 공간 마련
+                    dtoList.add(new LoginDTO("a1","b1"));
+                    dtoList.add(new LoginDTO("a2","b2"));
+                    dtoList.add(new LoginDTO("a3","b3"));
+                    dtoList.add(new LoginDTO("a4","b4"));
+                    dtoList.add(new LoginDTO("a5","b5"));
+
+                   intent.putExtra("dtolist", dtoList);
                     startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호 틀림", Toast.LENGTH_SHORT).show();
@@ -47,5 +65,15 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public class KhmClass implements Serializable {
+
+    }
+    public class KhmClass2 implements  Serializable {
+
+    }
+
+    public void method(Serializable k) {
+        // 역직렬화 : KhmClass k2 = (KhmClass) k;
     }
 }
