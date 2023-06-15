@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tv_cola, tv_cider, tv_fanta, tv_soda, tv_money;
     EditText edt_money;
     Button btn_cola, btn_cider, btn_fanta, btn_soda, btn_money, btn_change;
-    int inputMoney; // 사용자가 입금한 금액
+    int inputMoney=0; // 사용자가 입금한 금액
     int colaCnt, ciderCnt, fantaCnt, sodaCnt; // 음료 수량
     int uCola, uCider, uFanta, uSoda; // 사용자가 구매한 음료 수량
     int colaPrice, ciderPrice, fantaPrice, sodaPrice; // 음료 가격
