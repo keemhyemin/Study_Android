@@ -1,2 +1,2 @@
-# Study_Android.
+# Study_Android
 Android 수업
