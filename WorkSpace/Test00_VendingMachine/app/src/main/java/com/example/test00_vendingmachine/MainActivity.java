@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tv_cola, tv_cider, tv_fanta, tv_soda, tv_money;
     EditText edt_money;
     Button btn_cola, btn_cider, btn_fanta, btn_soda, btn_money, btn_change;
-    int inputMoney=0; // 사용자가 입금한 금액
+    int inputMoney = 0; // 사용자가 입금한 금액
     int colaCnt, ciderCnt, fantaCnt, sodaCnt; // 음료 수량
     int uCola, uCider, uFanta, uSoda; // 사용자가 구매한 음료 수량
     int colaPrice, ciderPrice, fantaPrice, sodaPrice; // 음료 가격
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 uCola++;
                 tv_money.setText("잔액: " + inputMoney + "원");
                 tv_cola.setText("수량: " + colaCnt + "개");
-            } else if(colaCnt == 0 || colaCnt < 0) {
+            } else if (colaCnt == 0 || colaCnt < 0) {
                 Toast.makeText(this, "재고가 없습니다.", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 uCider++;
                 tv_money.setText("잔액: " + inputMoney + "원");
                 tv_cider.setText("수량: " + ciderCnt + "개");
-            } else if(ciderCnt == 0 || ciderCnt < 0){
+            } else if (ciderCnt == 0 || ciderCnt < 0) {
                 Toast.makeText(this, "재고가 없습니다.", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 uFanta++;
                 tv_money.setText("잔액: " + inputMoney + "원");
                 tv_fanta.setText("수량: " + fantaCnt + "개");
-            } else if(fantaCnt == 0 || fantaCnt < 0){
+            } else if (fantaCnt == 0 || fantaCnt < 0) {
                 Toast.makeText(this, "재고가 없습니다.", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -115,20 +115,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 uSoda++;
                 tv_money.setText("잔액: " + inputMoney + "원");
                 tv_soda.setText("수량: " + sodaCnt + "개");
-            } else if(sodaCnt == 0 || sodaCnt < 0) {
+            } else if (sodaCnt == 0 || sodaCnt < 0) {
                 Toast.makeText(this, "재고가 없습니다.", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.btn_money) {
             try {
-                inputMoney += Integer.parseInt(edt_money.getText().toString());
-                if(inputMoney % 10 != 0) {
-                    Toast.makeText(this, "현금만 넣어주세요.", Toast.LENGTH_SHORT).show();
-                } else {
+                if (Integer.parseInt(edt_money.getText().toString()) % 10 == 0) {
+                    inputMoney += Integer.parseInt(edt_money.getText().toString());
                     tv_money.setText("잔액: " + inputMoney + "원");
+                } else {
+                    Toast.makeText(this, "현금만 넣어주세요.", Toast.LENGTH_SHORT).show();
                 }
-            }catch (Exception e) {
+            } catch (Exception e) {
                 Toast.makeText(this, "숫자만 입력해주세요.", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.btn_change) {
