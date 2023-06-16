@@ -5,22 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AdminActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="자판기 프로그램"
-        android:textAlignment="center"
-        android:textColor="#707070"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="30dp"
+        android:background="#888888"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자판기 관리"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout style="@style/linear_style">
 
-        <LinearLayout
-            style="@style/sub_linear_style">
+        <LinearLayout style="@style/sub_linear_style">
 
             <ImageView
                 android:id="@+id/img_cola"
@@ -34,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="콜라 800원" />
 
+
             <TextView
                 android:id="@+id/tv_cola"
                 android:layout_width="wrap_content"
@@ -43,12 +49,11 @@
                 android:id="@+id/btn_cola"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주문하기" />
+                android:text="수정하기" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/sub_linear_style">
+        <LinearLayout style="@style/sub_linear_style">
 
             <ImageView
                 android:id="@+id/img_cider"
@@ -72,15 +77,14 @@
                 android:id="@+id/btn_cider"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주문하기" />
+                android:text="수정하기" />
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout style="@style/linear_style">
 
-        <LinearLayout
-            style="@style/sub_linear_style">
+        <LinearLayout style="@style/sub_linear_style">
 
             <ImageView
                 android:id="@+id/fanta"
@@ -104,11 +108,10 @@
                 android:id="@+id/btn_fanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주문하기" />
+                android:text="수정하기" />
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/sub_linear_style">
+        <LinearLayout style="@style/sub_linear_style">
 
             <ImageView
                 android:layout_width="100dp"
@@ -131,55 +134,8 @@
                 android:id="@+id/btn_soda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주문하기" />
+                android:text="수정하기" />
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="10dp">
-
-        <EditText
-            android:id="@+id/edt_money"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0.8"
-            android:hint=" 금액을 입력하세요." />
-
-        <Button
-            android:id="@+id/btn_money"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0.2"
-            android:text="금액 입력" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:textColor="#707070" />
-
-    <Button
-        android:id="@+id/btn_change"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="20dp"
-        android:text="잔돈 반환" />
-
-    <Button
-        android:id="@+id/btn_admin"
-        android:layout_gravity="right"
-        android:layout_marginRight="10dp"
-        android:text="관리자"
-        android:textSize="13dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
 </LinearLayout>

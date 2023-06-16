@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView tv_cola, tv_cider, tv_fanta, tv_soda, tv_money;
     EditText edt_money;
-    Button btn_cola, btn_cider, btn_fanta, btn_soda, btn_money, btn_change;
+    Button btn_cola, btn_cider, btn_fanta, btn_soda, btn_money, btn_change, btn_admin;
     int inputMoney = 0; // 사용자가 입금한 금액
     int colaCnt, ciderCnt, fantaCnt, sodaCnt; // 음료 수량
     int uCola, uCider, uFanta, uSoda; // 사용자가 구매한 음료 수량
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_soda = findViewById(R.id.btn_soda);
         btn_money = findViewById(R.id.btn_money);
         btn_change = findViewById(R.id.btn_change);
+        btn_admin = findViewById(R.id.btn_admin);
 
         btn_cola.setOnClickListener(this);
         btn_cider.setOnClickListener(this);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_soda.setOnClickListener(this);
         btn_money.setOnClickListener(this);
         btn_change.setOnClickListener(this);
+        btn_admin.setOnClickListener(this);
 
         ArrayList<DrinkDTO> drinkList = new ArrayList<>();
         drinkList.add(new DrinkDTO("콜라", 800, 10));
@@ -138,6 +140,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("buycider", uCider);
             intent.putExtra("buyfanta", uFanta);
             intent.putExtra("buysoda", uSoda);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.putExtra("cola", colaCnt);
+            intent.putExtra("cider", ciderCnt);
+            intent.putExtra("fanta", fantaCnt);
+            intent.putExtra("soda", sodaCnt);
             startActivity(intent);
         }
     }

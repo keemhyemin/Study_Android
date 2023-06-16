@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Test00_VendingMachine"
         tools:targetApi="31">
         <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
