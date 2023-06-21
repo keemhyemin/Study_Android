@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         // inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         container_ln = findViewById(R.id.container_ln);
         container_fl = findViewById(R.id.container_fl);
-
         View vLinear = inflater.inflate(R.layout.sub_layout1, container_ln, true); // 1. '지금 바로 붙이겠다'라는 뜻 2. 내 리소스를 현재 화면의 리소스에 붙일건지
         View vFrame  = inflater.inflate(R.layout.sub_layout2, container_fl, true); // 1. '지금 바로 붙이겠다'라는 뜻 2. 내 리소스를 현재 화면의 리소스에 붙일건지
         // attachToRoot를 true로 쓰는 경우는 지금이 마지막(외울거면 false로 외워라)
