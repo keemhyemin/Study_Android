@@ -30,6 +30,7 @@ public class HomeFragment extends Fragment {
 
         btn_text.setOnClickListener(v1 -> {
             tv_result.setText(edt_text.getText().toString());
+            edt_text.setText(null);
         });
 
         return v;

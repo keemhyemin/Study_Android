@@ -1,12 +1,14 @@
 package com.example.and09_fragmentadapter.listv;
 
 
+import android.media.Image;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.and09_fragmentadapter.R;
 
@@ -45,13 +47,14 @@ public class AdapterListView extends BaseAdapter {
 
     // LayoutInflater를 이용해서 칸마다의 아이템을 붙이는 처리를 해줘야 함
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        convertView = inflater.inflate(R.layout.item_listview, parent, false);
-        ImageView img_profile = convertView.findViewById(R.id.imgv_profile);
-
-        img_profile.setImageResource(list.get(position).getImgRes());
-
-        return convertView;
+    public View getView(int i, View v, ViewGroup parent) {
+        v = inflater.inflate(R.layout.item_listview, parent, false);
+        ImageView img_profile = v.findViewById(R.id.imgv_profile);
+        img_profile.setImageResource(list.get(i).getImgRes());
+        TextView tv_name = v.findViewById(R.id.tv_name);
+        TextView tv_msg = v.findViewById(R.id.tv_msg);
+        tv_name.setText(list.get(i).getName());
+        tv_msg.setText(list.get(i).getMsg());
+        return v;
     }
 }
