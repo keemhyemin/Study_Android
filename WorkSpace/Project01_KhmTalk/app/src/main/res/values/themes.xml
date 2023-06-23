@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project01_KhmTalk" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/main_color</item>
+
+        <!-- 위에 시간 나오는 부분 스테이터스 바 라고 하고 색상을 흰색으로 바꿨다. -->
+        <item name="android:statusBarColor">@color/main_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="fontFamily">@font/font_main</item>
+    </style>
+
+    <style name="Theme.Project01_KhmTalk" parent="Base.Theme.Project01_KhmTalk" />
+</resources>

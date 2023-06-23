@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        100 : Light 얇은것
+        200 : 가벼운 글씨체
+        300 : ↑
+        400 : 일반
+        500 : 미디엄
+        600 : 세미볼드
+        700 : 굵게
+    -->
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/notosans_normal"
+        android:fontWeight="400"/>
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/notosans_bold"
+        android:fontWeight="700"/>
+
+
+</font-family>
