@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".opentalk.OpenTalkMainFragment"
+    android:orientation="vertical">
+
+    <!-- SearchView라는 위젯 <= 검색용, 꼭 써야하는 것은 아님
+        EditText, Button 조합이 더 깔끔할 때가 있다.
+        iconifiedByDefault : 한번 눌러야 입력을 받을건지
+    -->
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_margin="10dp"
+        android:background="#EAEAEA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:queryHint="관심 키워드로 새로운 오픈채팅 검색" />
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_grp"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_1"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:chipBackgroundColor="@drawable/chip_opentalk_background"
+            app:chipIcon="@drawable/ic_chip_1"
+            app:chipIconEnabled="true"
+            android:textColor="@drawable/chip_opentalk_forecolor"
+            app:chipIconTint="@drawable/chip_opentalk_forecolor"
+            app:chipMinHeight="40dp"
+            app:iconStartPadding="10dp"
+            app:iconEndPadding="10dp"
+            app:textStartPadding="5dp"
+            app:textEndPadding="5dp"
+            android:text="내 채팅방"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_2"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@drawable/chip_opentalk_background"
+            app:chipIcon="@drawable/ic_chip_2"
+            app:chipIconEnabled="true"
+            android:textColor="@drawable/chip_opentalk_forecolor"
+            app:chipIconTint="@drawable/chip_opentalk_forecolor"
+            app:chipMinHeight="40dp"
+            app:iconStartPadding="10dp"
+            app:iconEndPadding="10dp"
+            app:textStartPadding="5dp"
+            app:textEndPadding="5dp"
+            android:text="지금 뜨는"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_3"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@drawable/chip_opentalk_background"
+            app:chipIcon="@drawable/ic_chip_3"
+            app:chipIconEnabled="true"
+            android:textColor="@drawable/chip_opentalk_forecolor"
+            app:chipIconTint="@drawable/chip_opentalk_forecolor"
+            app:chipMinHeight="40dp"
+            app:iconStartPadding="10dp"
+            app:iconEndPadding="10dp"
+            app:textStartPadding="5dp"
+            app:textEndPadding="5dp"
+            android:text="오픈이벤트"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_4"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@drawable/chip_opentalk_background"
+            app:chipIcon="@drawable/ic_chip_1"
+            app:chipIconEnabled="true"
+            android:textColor="@drawable/chip_opentalk_forecolor"
+            app:chipIconTint="@drawable/chip_opentalk_forecolor"
+            app:chipMinHeight="40dp"
+            app:iconStartPadding="10dp"
+            app:iconEndPadding="10dp"
+            app:textStartPadding="5dp"
+            app:textEndPadding="5dp"
+            android:text="거지방"/>
+    </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
