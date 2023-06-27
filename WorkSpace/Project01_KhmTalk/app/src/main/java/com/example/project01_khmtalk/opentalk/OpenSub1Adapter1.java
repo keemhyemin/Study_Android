@@ -11,6 +11,15 @@ import com.example.project01_khmtalk.databinding.ItemOpensubRecv1Binding;
 public class OpenSub1Adapter1 extends RecyclerView.Adapter<OpenSub1Adapter1.ViewHolder> {
 
     ItemOpensubRecv1Binding binding;
+    int[] geojiImgArr;
+    String[] geojiChatArr;
+    String[] geojiCntArr;
+
+    public OpenSub1Adapter1(int[] geojiImgArr, String[] chatRoomArr, String[] chatCntArr) {
+        this.geojiImgArr = geojiImgArr;
+        this.geojiChatArr = chatRoomArr;
+        this.geojiCntArr = chatCntArr;
+    }
 
     @NonNull
     @Override
@@ -22,12 +31,14 @@ public class OpenSub1Adapter1 extends RecyclerView.Adapter<OpenSub1Adapter1.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.binding.lnChatroom.getContext();
+        h.binding.imgvGeoji.setImageResource(geojiImgArr[i]);
+        h.binding.tvGeojichat.setText(geojiChatArr[i]);
+        h.binding.tvGeojicnt.setText(geojiCntArr[i]);
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 6;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

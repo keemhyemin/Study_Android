@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opentalk.OpenSub4Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="오픈채팅 Lite - 지금 대화 중!"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgv_money"
+                android:alpha="0.8"
+                android:src="@drawable/money"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#8A9F88" />
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="절약방"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="오늘 소비 인증하기 | 284"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:textColor="#000"
+                android:text="사람1  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람2  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람3  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람4  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람5  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람6  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#000"
+                android:text="사람7  안녕하세요."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginHorizontal="15dp"
+            android:background="#CACACA"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center_horizontal"
+            android:text="오픈채팅 Lite 참여하기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="오픈채팅 오리지널 : 거지방"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv1_opensub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="워커홀릭의 두번째 일"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv2_opensub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="이런 주제 어때요?"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_grp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="희망적금"
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 앱테크 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 짠테크 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 갓생 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 무지출 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_6"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 거지방 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_7"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내집마련"
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_8"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 재테크 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_9"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 절약방 "
+                android:textColor="@drawable/chip_opentalk_forecolor"
+                app:chipBackgroundColor="@drawable/chip_opentalk_background"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@drawable/chip_opentalk_forecolor"
+                app:chipMinHeight="40dp"
+                app:iconEndPadding="10dp"
+                app:iconStartPadding="10dp"
+                app:textEndPadding="5dp"
+                app:textStartPadding="5dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="거지방의 또 다른 이름 절약방"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textColor="#111"
+                android:textStyle="bold"
+                android:text="절약방"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_below="@id/tv_name"
+                android:text="#역삼로156#만원의행복#회사원"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_cnt"
+                android:layout_below="@id/tv_tag"
+                android:text="9명"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginLeft="150dp"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_tag"
+                android:src="@drawable/geoji1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginHorizontal="15dp"
+            android:background="#CACACA"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="맛있는 집밥 레시피로 외식 물가 피하기"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv3_opensub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="어머니, 저희 용돈도 긴축입니까"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv4_opensub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

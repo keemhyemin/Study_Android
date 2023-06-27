@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    android:id="@+id/ln_workholic"
+    android:id="@+id/ln_recipe"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="5dp"
@@ -19,31 +19,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alpha="0.5"
-            android:background="#788C7F" >
+            android:background="#828E97" >
 
         <TextView
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30dp"
-            android:text="투잡"
+            android:text="레시피"
             android:textColor="#FFFFFF" />
 
             <TextView
                 android:textColor="#111"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="인스타그램 체험단 or 기자단" />
+                android:text="홈베이킹 하는 사람들" />
             <TextView
                 android:textColor="#111"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="독서로 부자되기" />
+                android:text="초보맘 요리레시피 공유" />
             <TextView
                 android:textColor="#111"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="바로고투잡방" />
+                android:text="초보 요리, 간단 레시피 공유" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
