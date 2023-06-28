@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project01_khmtalk.databinding.ItemOpensubRecv4Binding;
 
-public class OpenSub1Adapter4 extends  RecyclerView.Adapter <OpenSub1Adapter4.ViewHolder> {
+public class OpenSub1Adapter4 extends RecyclerView.Adapter<OpenSub1Adapter4.ViewHolder> {
 
     ItemOpensubRecv4Binding binding;
 

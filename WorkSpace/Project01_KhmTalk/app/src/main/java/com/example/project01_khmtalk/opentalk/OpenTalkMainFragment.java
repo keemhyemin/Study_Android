@@ -27,7 +27,7 @@ public class OpenTalkMainFragment extends Fragment {
         // jsp <=> Controller : jsp는 이미 조회가 완료된 내용을 Model을 통해 받아와서 el문법으로 보여주는 처리만 함. (Controller가 비즈니스 로직)
         // view <=> Adapter : View(Recycler, Pager2)는 어댑터가 이미 결정한 모양을 보여주는 처리만 함. ( 모든 처리는 Adapter 아이템 개수, 모양 (레이아웃))
         // Adapter는 개발자가 모양을 커스텀하기 편하게, 기본 구조를 갖춰놓고 나머지는 자유롭게 메소드를 구현해서 모양을 만들게 해둠.
-        FragmentAdapter adapter = new FragmentAdapter(this , getFragmentList());
+        FragmentAdapter adapter = new FragmentAdapter(this, getFragmentList());
         binding.pager2.setAdapter(adapter);
 
         binding.chipGrp.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
@@ -36,9 +36,9 @@ public class OpenTalkMainFragment extends Fragment {
                 Log.d("들어온 정보", "onCheckedChanged: ");
                 if (checkedId == R.id.chip_1) {
                     binding.pager2.setCurrentItem(0, true);
-                }else if (checkedId == R.id.chip_2) {
+                } else if (checkedId == R.id.chip_2) {
                     binding.pager2.setCurrentItem(1, true);
-                }else if (checkedId == R.id.chip_3) {
+                } else if (checkedId == R.id.chip_3) {
                     binding.pager2.setCurrentItem(2, true);
                 } else if (checkedId == R.id.chip_4) {
                     binding.pager2.setCurrentItem(3, true);
@@ -48,7 +48,7 @@ public class OpenTalkMainFragment extends Fragment {
         binding.pager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) { // 0~3
-                if(position == 0) {
+                if (position == 0) {
                     binding.chipGrp.check(R.id.chip_1);
                 } else if (position == 1) {
                     binding.chipGrp.check(R.id.chip_2);

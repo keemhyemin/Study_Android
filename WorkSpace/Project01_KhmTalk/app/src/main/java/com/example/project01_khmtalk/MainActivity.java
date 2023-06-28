@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,23 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
-            if(item.getItemId()==R.id.tab1) {
+            if (item.getItemId() == R.id.tab1) {
                 fragment = new FriendFragment();
                 actionBar.setTitle("친구");
-            }else if(item.getItemId()==R.id.tab2){
+            } else if (item.getItemId() == R.id.tab2) {
                 fragment = new ChatFragment();
                 actionBar.setTitle("채팅");
-            }else if(item.getItemId()==R.id.tab3){
+            } else if (item.getItemId() == R.id.tab3) {
                 fragment = new OpenTalkMainFragment();
                 actionBar.setTitle("오픈채팅");
-            }else if(item.getItemId()==R.id.tab4){
+            } else if (item.getItemId() == R.id.tab4) {
                 actionBar.setTitle("쇼핑");
-            }else if(item.getItemId()==R.id.tab5){
+            } else if (item.getItemId() == R.id.tab5) {
                 actionBar.setTitle("더보기");
-            }else {
+            } else {
                 return false;
             }
-            if(fragment == null) {
+            if (fragment == null) {
                 Toast.makeText(this, "아직 메뉴가 준비되지 않았습니다.", Toast.LENGTH_SHORT).show();
             } else {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();

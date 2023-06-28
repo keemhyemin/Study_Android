@@ -1,50 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:id="@+id/ln_workholic"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ln_workholic"
+    android:layout_width="300dp"
+    android:layout_height="370dp"
     android:layout_marginHorizontal="5dp"
     android:layout_marginBottom="5dp"
-    android:layout_width="230dp"
-    android:layout_height="300dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="30dp">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.5"
-            android:background="#788C7F" >
+            android:background="@drawable/stroke">
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="투잡"
-            android:textColor="#FFFFFF" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:alpha="0.8"
+                android:scaleType="fitXY"
+                android:src="@drawable/ani1" />
 
-            <TextView
-                android:textColor="#111"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="인스타그램 체험단 or 기자단" />
-            <TextView
-                android:textColor="#111"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="독서로 부자되기" />
-            <TextView
-                android:textColor="#111"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="바로고투잡방" />
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="진격의거인"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="눈꽃 웹툰 &amp; 애니수다방"
+                            android:textColor="#111"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="71dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="9명"
+                            android:textColor="#111"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="90dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ani2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#C5C5C5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="진격의 거인"
+                            android:textColor="#111"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="71dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="211명"
+                            android:textColor="#111"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="93dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ani3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#C5C5C5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="[진격의거인] 소통해요!"
+                            android:textColor="#111"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="71dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="9명"
+                            android:textColor="#111"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="90dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ani4" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

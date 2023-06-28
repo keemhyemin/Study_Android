@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,20 +26,20 @@
 
             <ImageView
                 android:id="@+id/imgv_money"
-                android:alpha="0.8"
-                android:src="@drawable/money"
-                android:scaleType="fitXY"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="#8A9F88" />
+                android:alpha="0.8"
+                android:background="#8A9F88"
+                android:scaleType="fitXY"
+                android:src="@drawable/money" />
 
             <TextView
-                android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="절약방"
+                android:textColor="#FFFFFF"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -55,62 +54,68 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_marginHorizontal="15dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical">
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람1  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람2  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람3  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람4  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람5  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="사람6  안녕하세요."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#000" />
+
             <TextView
-                android:textColor="#000"
-                android:text="사람7  안녕하세요."
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="사람7  안녕하세요."
+                android:textColor="#000" />
 
 
         </LinearLayout>
 
         <View
-            android:layout_marginHorizontal="15dp"
-            android:background="#CACACA"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="#CACACA" />
 
         <TextView
-            android:layout_marginVertical="5dp"
-            android:layout_gravity="center_horizontal"
-            android:text="오픈채팅 Lite 참여하기"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="5dp"
+            android:text="오픈채팅 Lite 참여하기" />
 
         <View
             android:layout_width="match_parent"
@@ -139,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:text="워커홀릭의 두번째 일"
+            android:text="덕후 아니라도 이건 알잖아"
             android:textSize="17dp"
             android:textStyle="bold" />
 
@@ -338,45 +343,48 @@
             android:textStyle="bold" />
 
         <RelativeLayout
-            android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
 
             <TextView
                 android:id="@+id/tv_name"
-                android:textColor="#111"
-                android:textStyle="bold"
-                android:text="절약방"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="절약방"
+                android:textColor="#111"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tv_tag"
-                android:layout_below="@id/tv_name"
-                android:text="#역삼로156#만원의행복#회사원"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:text="#역삼로156#만원의행복#회사원" />
+
             <TextView
                 android:id="@+id/tv_cnt"
-                android:layout_below="@id/tv_tag"
-                android:text="9명"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tag"
+                android:text="9명" />
+
             <ImageView
-                android:layout_marginLeft="150dp"
-                android:scaleType="fitXY"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/tv_tag"
-                android:src="@drawable/geoji1"
                 android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@id/tv_tag"
+                android:scaleType="fitXY"
+                android:src="@drawable/geoji1" />
 
         </RelativeLayout>
 
         <View
-            android:layout_marginHorizontal="15dp"
-            android:background="#CACACA"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="#CACACA" />
 
         <View
             android:layout_width="match_parent"
@@ -387,7 +395,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:text="맛있는 집밥 레시피로 외식 물가 피하기"
+            android:text="1분기 애니 다시 정주행하자"
             android:textSize="17dp"
             android:textStyle="bold" />
 
