@@ -1,18 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#FEFEFE">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imgv_menu"
+            android:layout_width="45dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/imgv_logo"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imgv_notice"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/imgv_logo"
+            android:src="@drawable/bell" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:text="김혜민"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/tv_name"
+            android:text=" 님,"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="40dp"
+            android:text="안녕하세요!"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_nim"
+            android:scaleType="fitXY"
+            android:src="@drawable/barcode" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:src="@drawable/rectangle" />
+
+            <ImageView
+                android:id="@+id/imgv_menu1"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="162dp"
+                android:src="@drawable/img_menu1" />
+
+            <ImageView
+                android:id="@+id/imgv_menu2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="155dp"
+                android:layout_toRightOf="@id/imgv_menu1"
+                android:src="@drawable/img_menu2" />
+
+            <ImageView
+                android:id="@+id/imgv_menu3"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/imgv_menu1"
+                android:layout_marginLeft="45dp"
+                android:src="@drawable/img_menu3" />
+
+            <ImageView
+                android:id="@+id/imgv_menu4"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/imgv_menu2"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/img_menu4" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/gift" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기프트샵"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/map" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매장찾기"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/event" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이벤트"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

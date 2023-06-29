@@ -21,10 +21,10 @@ public class OpenSub4Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentOpenSub4Binding.inflate(inflater, container, false);
-        binding.recv1Opensub.setAdapter(new OpenSub1Adapter1(geojiImgArr, geojiChatArr, geojiCntArr));
-        binding.recv2Opensub.setAdapter(new OpenSub1Adapter2());
-        binding.recv3Opensub.setAdapter(new OpenSub1Adapter3());
-        binding.recv4Opensub.setAdapter(new OpenSub1Adapter4(geojiImgArr2, geojiChatArr2, geojiCntArr2));
+        binding.recv1Opensub.setAdapter(new OpenSub4Adapter1(geojiImgArr, geojiChatArr, geojiCntArr));
+        binding.recv2Opensub.setAdapter(new OpenSub4Adapter2());
+        binding.recv3Opensub.setAdapter(new OpenSub4Adapter3());
+        binding.recv4Opensub.setAdapter(new OpenSub4Adapter4(geojiImgArr2, geojiChatArr2, geojiCntArr2));
 
         binding.recv1Opensub.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         binding.recv2Opensub.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
