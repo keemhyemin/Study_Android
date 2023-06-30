@@ -1,11 +1,11 @@
 package com.example.lastcloneappproject;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.lastcloneappproject.databinding.ItemBannerBinding;
 

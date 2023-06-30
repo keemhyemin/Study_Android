@@ -25,11 +25,8 @@ public class SplashActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.show();
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
         new Handler().postDelayed(() -> {
-            dialog.dismiss(); // 안보이게 처리
+            dialog.dismiss();
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
