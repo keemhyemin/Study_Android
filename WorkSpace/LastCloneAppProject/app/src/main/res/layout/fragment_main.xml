@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainFragment">
+    tools:context=".HomeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,8 +13,9 @@
 
         <ImageView
             android:id="@+id/imgv_menu"
+            android:layout_marginTop="5dp"
             android:layout_width="45dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:src="@drawable/menu" />
 
         <ImageView
