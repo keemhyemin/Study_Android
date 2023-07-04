@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.lastcloneappproject.databinding.ActivityMainBinding;
+import com.example.lastcloneappproject.home.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity {
