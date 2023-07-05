@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".stamp.StampFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEFEFE">
+
+        <ImageView
+            android:id="@+id/imgv_before"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tv_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="스탬프"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imgv_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/tv_tool"
+            android:src="@drawable/home" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="스탬프카드"
+                android:textColor="#707070"
+                android:background="#fff"
+                android:backgroundTint="#E1E1E1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_gravity="center"
+            android:background="#989898"
+            android:layout_width="1dp"
+            android:layout_height="48dp"/>
+
+        <RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="목록보기"
+                android:textColor="#707070"
+                android:background="#fff"
+                android:backgroundTint="#E1E1E1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

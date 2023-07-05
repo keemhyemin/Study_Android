@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoticeFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".NoticeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,53 +12,48 @@
         android:background="#FEFEFE">
 
         <ImageView
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="10dp"
             android:id="@+id/imgv_before"
             android:layout_width="40dp"
             android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/arrow" />
 
         <TextView
             android:id="@+id/tv_tool"
-            android:text="알림"
-            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:text="알림"
+            android:textSize="18dp" />
 
         <ImageView
             android:id="@+id/imgv_home"
-            android:layout_toRightOf="@id/tv_tool"
-            android:layout_marginLeft="140dp"
-            android:layout_marginTop="13dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/tv_tool"
             android:src="@drawable/home" />
 
     </RelativeLayout>
 
 
-
     <FrameLayout
-        android:background="#FDFDFD"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FDFDFD">
 
         <TextView
-            android:text="알림메세지가 없습니다."
-            android:textSize="12dp"
-            android:layout_marginTop="70dp"
-            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:text="알림메세지가 없습니다."
+            android:textSize="12dp" />
 
     </FrameLayout>
-
-
-
-
 
 
 </LinearLayout>

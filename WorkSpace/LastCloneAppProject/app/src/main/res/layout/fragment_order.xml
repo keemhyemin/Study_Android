@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".order.OrderFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-<LinearLayout
-    android:background="#FEFEFE"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:background="#FEFEFE"
+    android:orientation="vertical"
+    tools:context=".order.OrderFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,11 +21,11 @@
             android:src="@drawable/arrow" />
 
         <ImageView
-            android:layout_toRightOf="@id/imgv_before"
-            android:src="@drawable/menu"
-            android:layout_marginTop="8dp"
             android:layout_width="45dp"
-            android:layout_height="45dp"/>
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/imgv_before"
+            android:src="@drawable/menu" />
 
         <TextView
             android:id="@+id/tv_tool"
@@ -44,64 +38,80 @@
 
         <ImageView
             android:id="@+id/imgv_home"
-            android:layout_toRightOf="@id/tv_tool"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="13dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/tv_tool"
             android:src="@drawable/home" />
 
     </RelativeLayout>
 
     <View
-        android:background="#AEAEAE"
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="2dp"
+        android:background="#AEAEAE" />
 
-    <TextView
-        android:textSize="12dp"
-        android:text="회원님 위치에서 2km 이내의 매장에서만 주문 가능합니다."
-        android:layout_gravity="center"
-        android:gravity="center_vertical|center_horizontal"
-        android:background="@drawable/rectangle_2"
-        android:layout_marginTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="17dp"
-        android:text="나의 매장"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#AEAEAE"
-        android:layout_marginHorizontal="15dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="17dp"
-        android:text="가까운 매장"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#AEAEAE"
-        android:layout_marginHorizontal="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recv_order"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangle_2"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="회원님 위치에서 2km 이내의 매장에서만 주문 가능합니다."
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="나의 매장"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#AEAEAE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="가까운 매장"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#AEAEAE" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </LinearLayout>
-</androidx.core.widget.NestedScrollView>
