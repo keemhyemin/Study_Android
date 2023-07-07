@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:background="#FEFEFE"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEFEFE"
     android:orientation="vertical"
     tools:context=".stamp.StampFragment">
 
@@ -40,97 +39,184 @@
             android:src="@drawable/home" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_weight="0.5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:text="스탬프카드"
-                android:textColor="#707070"
-                android:background="#fff"
-                android:backgroundTint="#E1E1E1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-
-        <View
-            android:layout_gravity="center"
-            android:background="#989898"
-            android:layout_width="1dp"
-            android:layout_height="48dp"/>
-
-        <RelativeLayout
-            android:layout_weight="0.5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:text="목록보기"
-                android:textColor="#707070"
-                android:background="#fff"
-                android:backgroundTint="#E1E1E1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-
-
-
-
-
-    </LinearLayout>
-
-    <ImageView
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:src="@drawable/logo2" />
-    <TextView
-        android:gravity="center"
-        android:textColor="#111"
-        android:text="스탬프 카드 완성까지 10개의 스탬프가 남았습니다."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="70dp"
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:textStyle="bold"
-            android:textColor="#C10E2E"
-            android:text="0"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="/10"
-            android:textSize="18dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="175dp"
-            android:src="@drawable/refresh" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <ImageView
-        android:layout_gravity="center"
-        android:src="@drawable/stamp"
-        android:layout_width="270dp"
-        android:layout_height="150dp"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:backgroundTint="#E1E1E1"
+                        android:text="스탬프카드"
+                        android:textColor="#707070" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="#989898" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:backgroundTint="#E1E1E1"
+                        android:text="목록보기"
+                        android:textColor="#707070" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="스탬프 카드 완성까지 10개의 스탬프가 남았습니다."
+                android:textColor="#111" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="0"
+                    android:textColor="#C10E2E"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/10"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="175dp"
+                    android:src="@drawable/refresh" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="270dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/stamp" />
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="공차 스탬프 카드"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="카드 유효기간 : ~ "
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="스탬프 10개 적립 시 무료 음료 1잔 쿠폰 제공"
+                android:textSize="13dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgv_stmbtn1"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/stampbtn1" />
+
+                <ImageView
+                    android:id="@+id/imgv_stmbtn2"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/imgv_stmbtn1"
+                    android:src="@drawable/stampbtn2" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="스탬프 적립 안내"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#AEAEAE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="스탬프 쿠폰 사용 안내"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#AEAEAE" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
+
+
+
+
