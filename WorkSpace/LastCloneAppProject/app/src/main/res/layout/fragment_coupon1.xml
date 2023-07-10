@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".coupon.Coupon1Fragment">
+    tools:context=".coupon.Coupon1Fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,6 +61,7 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,6 +77,7 @@
             android:background="#CCCCCC" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,6 +92,7 @@
             android:background="#CCCCCC" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -118,19 +125,21 @@
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="23dp"
         android:text="사용가능한 쿠폰이 없습니다."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="#B22934"
         android:text="쿠폰 등록하기"
         android:textColor="#fff"
-        android:textSize="23dp" />
+        android:textSize="20dp" />
 
 
-</LinearLayout>
+</RelativeLayout>
