@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.databinding.ItemOrderRecvBinding;
 
 import java.util.ArrayList;
@@ -35,6 +36,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         h.binding.tvAddress.setText(list.get(i).getAddress());
         h.binding.imgvDot.setImageResource(list.get(i).getImgdot());
         h.binding.tvDistance.setText(list.get(i).getDistance());
+        h.binding.imgvFav.setOnClickListener(view -> {
+            h.binding.imgvFav.setImageResource(R.drawable.fav2);
+        });
+
     }
 
     @Override
