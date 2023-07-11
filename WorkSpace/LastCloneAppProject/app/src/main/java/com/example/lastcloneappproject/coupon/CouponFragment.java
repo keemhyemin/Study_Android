@@ -20,7 +20,7 @@ public class CouponFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentCouponBinding.inflate(inflater, container, false);
+        binding = FragmentCouponBinding.inflate(getLayoutInflater());
         binding.imgvBefore.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
@@ -31,6 +31,20 @@ public class CouponFragment extends Fragment {
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
         });
 
+        binding.btn1.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.rl_container, new Coupon1Fragment()).commit();
+        });
+
+        binding.btn2.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.rl_container, new Coupon2Fragment()).commit();
+        });
+
+        binding.btn3.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.rl_container, new Coupon3Fragment()).commit();
+        });
         return binding.getRoot();
     }
 }

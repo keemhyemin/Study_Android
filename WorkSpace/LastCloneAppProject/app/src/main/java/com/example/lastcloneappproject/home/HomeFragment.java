@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.lastcloneappproject.NoticeFragment;
 import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.coupon.Coupon1Fragment;
+import com.example.lastcloneappproject.coupon.CouponFragment;
 import com.example.lastcloneappproject.databinding.FragmentHomeBinding;
 import com.example.lastcloneappproject.order.OrderFragment;
 import com.example.lastcloneappproject.stamp.StampFragment;
@@ -43,7 +44,7 @@ public class HomeFragment extends Fragment {
 
         binding.imgvMenu3.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.ln_container, new Coupon1Fragment()).commit();
+            transaction.replace(R.id.ln_container, new CouponFragment()).commit();
         });
 
 
