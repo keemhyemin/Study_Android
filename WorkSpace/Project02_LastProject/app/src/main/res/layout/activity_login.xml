@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.LoginActivity"
+    android:orientation="vertical">
+
+    <!-- Glide Url을 이용해서 이미지를 붙이는 처리.예정-->
+    <ImageView
+        android:id="@+id/imgv_logo"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/outline_smart_toy_24"
+        app:boxBackgroundColor="#fff"
+        app:helperText="아이디를 입력하세요"
+        app:boxStrokeColor="#D6EC58"
+        app:startIconContentDescription="아이디">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_id"
+            android:inputType="text"
+            android:hint="아이디"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/outline_smart_toy_24"
+        app:helperText="비밀번호를 입력하세요"
+        app:boxStrokeColor="#D6EC58"
+        app:boxBackgroundColor="#fff"
+        app:startIconContentDescription="비밀번호"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_pw"
+            android:inputType="text"
+            android:hint="비밀번호"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_margin="5dp"
+        android:id="@+id/chk_login"
+        android:text="로그인 정보 기억하기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C983D1"
+        android:elevation="5dp"
+        android:text="로그인"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_launcher_foreground"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+        app:iconSize="50dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:strokeColor="#979797"
+        app:strokeWidth="3dp" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#62C83B"
+        android:elevation="5dp"
+        android:text="네이버 아이디 로그인(예정)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_launcher_foreground"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+        app:iconSize="50dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:strokeColor="#979797"
+        app:strokeWidth="3dp" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EBFA1D"
+        android:elevation="5dp"
+        android:text="카카오 아이디 로그인 (예정)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_launcher_foreground"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+        app:iconSize="50dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:strokeColor="#979797"
+        app:strokeWidth="3dp" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="아직 회원이 아니라면?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_join"
+            android:text="회원가입"
+            android:textColor="#3280CD"
+            android:textStyle="bold|italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
