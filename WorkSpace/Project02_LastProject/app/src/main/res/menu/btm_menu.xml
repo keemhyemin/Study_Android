@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:enabled="true"
+        android:id="@+id/menu_cus"
+        android:title="CUS"
+        android:icon="@drawable/account"/>
+
+    <item
+        android:id="@+id/menu_emp"
+        android:title="EMP"
+        android:icon="@drawable/work"/>
+
+    <item
+        android:id="@+id/menu_board"
+        android:title="BOARD"
+        android:icon="@drawable/board"/>
+
+    <item
+        android:id="@+id/menu_godata"
+        android:title="Godata"
+        android:icon="@drawable/data"/>
+
+</menu>

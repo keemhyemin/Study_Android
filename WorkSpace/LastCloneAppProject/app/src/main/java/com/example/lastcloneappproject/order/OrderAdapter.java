@@ -17,6 +17,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     ItemOrderRecvBinding binding;
     ArrayList<OrderDTO> list;
 
+    boolean fav;
+
     public OrderAdapter(ArrayList<OrderDTO> list) {
         this.list = list;
     }
@@ -37,7 +39,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         h.binding.imgvDot.setImageResource(list.get(i).getImgdot());
         h.binding.tvDistance.setText(list.get(i).getDistance());
         h.binding.imgvFav.setOnClickListener(view -> {
-            h.binding.imgvFav.setImageResource(R.drawable.fav2);
+           h.binding.imgvFav.setImageResource(R.drawable.fav2);
         });
 
     }
