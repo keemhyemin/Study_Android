@@ -14,6 +14,7 @@ import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.coupon.Coupon1Fragment;
 import com.example.lastcloneappproject.coupon.CouponFragment;
 import com.example.lastcloneappproject.databinding.FragmentHomeBinding;
+import com.example.lastcloneappproject.giftshop.GiftShopFragment;
 import com.example.lastcloneappproject.order.OrderFragment;
 import com.example.lastcloneappproject.stamp.StampFragment;
 
@@ -46,6 +47,12 @@ public class HomeFragment extends Fragment {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new CouponFragment()).commit();
         });
+
+        binding.lnGiftshop.setOnClickListener(view -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new GiftShopFragment()).commit();
+        });
+
 
 
         return binding.getRoot();
