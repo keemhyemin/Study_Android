@@ -1,4 +1,4 @@
--- AndMember
+-- AndMember(hanul)
 -- id, password, name, phonenumber, address, profileimg, gender
 
 create table AndMember (
@@ -17,4 +17,19 @@ values ('dev', 'dev', '개발자', '여', '010-1234-5678', '광주광역시 서구 농성동',
 commit;
 
 select * from andmember;
+
+
+-- hr
+select e.employee_id, e.first_name || ' ' || e.last_name name, 
+       case when mod(e.employee_id, 2)=0 then e.email || '@gmail.com'
+            else e.email || '@naver.com' end as email,
+            replace(e.phone_number, '.', '-') as phone_number,
+            to_char(e.hire_date, 'YYYY-MM-DD') as hire_date, j.job_title, d. department_name,
+            case when e.commission_pct is null then to_char((e.salary * 1289) + nvl((e.commission_pct*e.salary*1289),0), '999,999,999') || '원'
+            else to_char((e.salary * 1289) + nvl((e.commission_pct*e.salary*1289),0), '999,999,999') || '원' || 
+            '(' || to_char(nvl((e.commission_pct * e.salary * 1289), 0), '999,999,999') || ')' end as salary
+from employees e, jobs j, departments d
+where e.department_id = d.department_id(+)
+and e.job_id = j.job_id(+)
+order by 1;
 
