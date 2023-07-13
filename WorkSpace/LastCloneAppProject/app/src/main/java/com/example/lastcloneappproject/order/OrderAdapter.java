@@ -17,8 +17,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     ItemOrderRecvBinding binding;
     ArrayList<OrderDTO> list;
 
-    boolean fav;
-
     public OrderAdapter(ArrayList<OrderDTO> list) {
         this.list = list;
     }
