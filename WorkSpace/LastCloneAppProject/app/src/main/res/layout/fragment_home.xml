@@ -143,7 +143,7 @@
 
         <LinearLayout
             android:id="@+id/ln_giftshop"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
@@ -164,9 +164,8 @@
 
         <LinearLayout
             android:id="@+id/ln_map"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
@@ -174,12 +173,12 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginBottom="2dp"
                 android:src="@drawable/map" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="매장찾기"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -187,7 +186,7 @@
 
         <LinearLayout
             android:id="@+id/event"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
@@ -204,7 +203,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이벤트"
+                android:text="이벤트&amp;뉴스"
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>

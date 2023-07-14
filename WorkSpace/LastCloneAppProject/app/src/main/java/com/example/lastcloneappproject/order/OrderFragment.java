@@ -26,7 +26,7 @@ public class OrderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentOrderBinding.inflate(inflater, container, false);
+        binding = FragmentOrderBinding.inflate(getLayoutInflater());
         binding.recvOrder.setAdapter(new OrderAdapter(getList()));
         binding.recvOrder.setLayoutManager(new LinearLayoutManager(getContext()));
 

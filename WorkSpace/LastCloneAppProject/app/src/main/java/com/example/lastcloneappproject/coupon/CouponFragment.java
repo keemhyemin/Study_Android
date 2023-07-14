@@ -33,17 +33,17 @@ public class CouponFragment extends Fragment {
 
         binding.btn1.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.rl_container, new Coupon1Fragment()).commit();
+            transaction.replace(R.id.coupon_container, new Coupon1Fragment()).commit();
         });
 
         binding.btn2.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.rl_container, new Coupon2Fragment()).commit();
+            transaction.replace(R.id.coupon_container, new Coupon2Fragment()).commit();
         });
 
         binding.btn3.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.rl_container, new Coupon3Fragment()).commit();
+            transaction.replace(R.id.coupon_container, new Coupon3Fragment()).commit();
         });
         return binding.getRoot();
     }

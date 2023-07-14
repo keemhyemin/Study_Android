@@ -3,6 +3,7 @@ package com.example.lastcloneappproject.giftshop;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.databinding.FragmentGiftShopBinding;
+import com.example.lastcloneappproject.home.HomeFragment;
+import com.example.lastcloneappproject.home.SliderAdapter;
 
 import java.util.ArrayList;
 
@@ -21,11 +24,27 @@ public class GiftShopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentGiftShopBinding.inflate(inflater, container, false);
+        binding = FragmentGiftShopBinding.inflate(getLayoutInflater());
         binding.recvDrink.setAdapter(new DrinkAdapter(getList()));
+        binding.recvDrink2.setAdapter(new Drink2Adapter(getList()));
+        binding.vpslider.setAdapter(new SliderAdapter(banArr));
         binding.recvDrink.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        binding.recvDrink2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        binding.imgvBefore.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new HomeFragment()).commit();
+        });
+
+        binding.imgvHome.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new HomeFragment()).commit();
+        });
+
         return binding.getRoot();
     }
+
+    int[] banArr = {R.drawable.img_banner1, R.drawable.img_banner2, R.drawable.img_banner3};
 
     public ArrayList<DrinkDTO> getList() {
         ArrayList<DrinkDTO> list = new ArrayList<>();

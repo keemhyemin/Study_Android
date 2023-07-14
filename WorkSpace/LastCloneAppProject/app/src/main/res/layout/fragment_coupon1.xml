@@ -9,7 +9,6 @@
 
     <RelativeLayout
         android:layout_weight="1"
-        android:id="@+id/rl_container"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
@@ -35,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginTop="50dp"
             android:text="사용가능한 쿠폰이 없습니다."
             android:textSize="23dp"
             android:textStyle="bold" />

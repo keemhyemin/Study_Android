@@ -20,7 +20,7 @@ public class StampFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentStampBinding.inflate(inflater, container, false);
+        binding = FragmentStampBinding.inflate(getLayoutInflater());
         binding.imgvBefore.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
@@ -30,6 +30,7 @@ public class StampFragment extends Fragment {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
         });
+
 
         return binding.getRoot();
     }
