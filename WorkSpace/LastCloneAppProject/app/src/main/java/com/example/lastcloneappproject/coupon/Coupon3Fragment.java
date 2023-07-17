@@ -18,7 +18,7 @@ public class Coupon3Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentCoupon3Binding.inflate(getLayoutInflater());
+        binding = FragmentCoupon3Binding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 }

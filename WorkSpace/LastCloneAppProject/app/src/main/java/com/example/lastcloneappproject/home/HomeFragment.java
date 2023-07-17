@@ -11,12 +11,11 @@ import android.view.ViewGroup;
 
 import com.example.lastcloneappproject.NoticeFragment;
 import com.example.lastcloneappproject.R;
-import com.example.lastcloneappproject.coupon.Coupon1Fragment;
-import com.example.lastcloneappproject.coupon.CouponFragment;
+import com.example.lastcloneappproject.coupon.CouponMenuFragment;
 import com.example.lastcloneappproject.databinding.FragmentHomeBinding;
 import com.example.lastcloneappproject.giftshop.GiftShopFragment;
 import com.example.lastcloneappproject.order.OrderFragment;
-import com.example.lastcloneappproject.stamp.StampFragment;
+import com.example.lastcloneappproject.stamp.StampMenuFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -25,7 +24,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(getLayoutInflater());
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.vpslider.setAdapter(new SliderAdapter(banArr));
 
         binding.imgvNotice.setOnClickListener(v -> {
@@ -40,17 +39,21 @@ public class HomeFragment extends Fragment {
 
         binding.imgvMenu2.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.ln_container, new StampFragment()).commit();
+            transaction.replace(R.id.ln_container, new StampMenuFragment()).commit();
         });
 
         binding.imgvMenu3.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.ln_container, new CouponFragment()).commit();
+            transaction.replace(R.id.ln_container, new CouponMenuFragment()).commit();
         });
 
-        binding.lnGiftshop.setOnClickListener(view -> {
+        binding.lnGiftshop.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new GiftShopFragment()).commit();
+        });
+
+        binding.lnMap.setOnClickListener(v -> {
+
         });
 
 

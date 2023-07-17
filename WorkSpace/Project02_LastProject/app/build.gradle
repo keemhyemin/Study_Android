@@ -54,4 +54,8 @@ dependencies {
 
     // 리사이클러뷰나 목록을 가진 뷰가 맨위로 스크롤이 되면 새로고침을 하는 디자인이 나옴(스피너)
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation "com.kakao.sdk:v2-user:2.15.0" // 카카오 로그인
+
+    implementation 'com.navercorp.nid:oauth:5.6.0' // 네이버 로그인
 }

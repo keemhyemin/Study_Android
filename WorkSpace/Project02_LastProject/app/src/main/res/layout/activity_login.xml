@@ -85,50 +85,21 @@
         app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
         app:strokeColor="#979797"
         app:strokeWidth="3dp" />
-    <com.google.android.material.button.MaterialButton
+
+    <ImageView
+        android:id="@+id/imgv_kakaologin"
+        android:scaleType="fitXY"
+        android:src="@drawable/kakao_login_img"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#62C83B"
-        android:elevation="5dp"
-        android:text="네이버 아이디 로그인(예정)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/white"
-        app:icon="@drawable/ic_launcher_foreground"
-        app:iconGravity="start"
-        app:iconPadding="@dimen/cardview_compat_inset_shadow"
-        app:iconSize="50dp"
-        app:iconTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#FFFFFF"
-        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
-        app:strokeColor="#979797"
-        app:strokeWidth="3dp" />
-    <com.google.android.material.button.MaterialButton
+        android:layout_height="wrap_content" />
+
+    <com.navercorp.nid.oauth.view.NidOAuthLoginButton
+        android:id="@+id/buttonOAuthLoginImg"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#EBFA1D"
-        android:elevation="5dp"
-        android:text="카카오 아이디 로그인 (예정)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/black"
-        app:icon="@drawable/ic_launcher_foreground"
-        app:iconGravity="start"
-        app:iconPadding="@dimen/cardview_compat_inset_shadow"
-        app:iconSize="50dp"
-        app:iconTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#FFFFFF"
-        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
-        app:strokeColor="#979797"
-        app:strokeWidth="3dp" />
+        android:layout_height="50dp" />
+
 
     <LinearLayout
         android:gravity="center"

@@ -24,7 +24,7 @@ public class GiftShopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentGiftShopBinding.inflate(getLayoutInflater());
+        binding = FragmentGiftShopBinding.inflate(inflater, container, false);
         binding.recvDrink.setAdapter(new DrinkAdapter(getList()));
         binding.recvDrink2.setAdapter(new Drink2Adapter(getList()));
         binding.vpslider.setAdapter(new SliderAdapter(banArr));
