@@ -9,16 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lastcloneappproject.R;
-import com.example.lastcloneappproject.databinding.FragmentStampBinding;
+import com.example.lastcloneappproject.databinding.FragmentListBinding;
 
-public class StampFragment extends Fragment {
+public class ListFragment extends Fragment {
 
-    FragmentStampBinding binding;
+    FragmentListBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentStampBinding.inflate(inflater, container, false);
+        binding = FragmentListBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 }

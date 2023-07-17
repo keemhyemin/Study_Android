@@ -19,6 +19,15 @@
             android:layout_height="50dp"
             android:src="@drawable/fav" />
 
+        <ImageView
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgv_fav2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fav2" />
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

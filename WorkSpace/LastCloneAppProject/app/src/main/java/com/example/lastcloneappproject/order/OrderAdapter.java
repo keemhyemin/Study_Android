@@ -26,18 +26,25 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         binding = ItemOrderRecvBinding.inflate(inflater, parent, false);
+
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+        h.binding.imgvFav2.setVisibility(View.INVISIBLE);
         h.binding.imgvFav.setImageResource(list.get(i).getImgfav());
         h.binding.tvShop.setText(list.get(i).getShop());
         h.binding.tvAddress.setText(list.get(i).getAddress());
         h.binding.imgvDot.setImageResource(list.get(i).getImgdot());
         h.binding.tvDistance.setText(list.get(i).getDistance());
         h.binding.imgvFav.setOnClickListener(view -> {
-           h.binding.imgvFav.setImageResource(R.drawable.fav2);
+            h.binding.imgvFav2.setVisibility(View.VISIBLE);
+            h.binding.imgvFav.setVisibility(View.INVISIBLE);
+        });
+        h.binding.imgvFav2.setOnClickListener(v -> {
+            h.binding.imgvFav2.setVisibility(View.INVISIBLE);
+            h.binding.imgvFav.setVisibility(View.VISIBLE);
         });
 
     }
