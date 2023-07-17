@@ -22,8 +22,8 @@ public class CouponMenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentCouponMenuBinding.inflate(getLayoutInflater());
 
-        FragmentTransaction transaction2 = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction2.replace(R.id.coupon_container, new Coupon1Fragment()).commit();
+        FragmentTransaction mainTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        mainTransaction.replace(R.id.coupon_container, new Coupon1Fragment()).commit();
 
         binding.imgvBefore.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
