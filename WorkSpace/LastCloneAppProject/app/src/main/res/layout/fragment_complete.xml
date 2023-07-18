@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".stamp.CompleteFragment">
+
+    <TextView
+        android:gravity="center"
+        android:text="완성한 카드는 0개입니다"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="완성된 스탬프 카드를 쿠폰으로 다운로드 받으세요."
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="스탬프 쿠폰 사용 안내"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#AEAEAE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:lineSpacingExtra="7dp"
+        android:text="- [다운받기] 버튼을 누르면 쿠폰이 발행되며, 발행한\n  쿠폰은 [My쿠폰]에서 확인 후 사용 가능합니다.\n
+- 스탬프 쿠폰 발행 기간은 스탬프 카드 완성일로부터 \n   31일이며, 31일 이내 발행하지 않은 쿠폰은 소멸됩니다.\n
+- 본 쿠폰 혜택은 현금 및 타 쿠폰으로 대체 제공되지\n   않습니다. \n
+- 유효 기간이 지난 쿠폰은 사용 불가합니다.\n
+- 스탬프 카드 완성 후 결제 취소 및 결제수단 변경에 따른 \n   스탬프 적립 취소 시, 스탬프 쿠폰은 소멸되며 적립중인\n   스탬프 카드 상태로 원복됩니다.\n  (단, 해당 스탬프 카드의 유효기간이 만료된 경우, 스탬프\n   쿠폰 및 카드에 적립되었던 스탬프는 모두 소멸됩니다.)\n
+- 다운로드 받은 쿠폰은 본인만 사용 가능하며, 양도 및\n   선물하기가 불가합니다.\n
+- [My쿠폰]에서 쿠폰 사용 조건을 꼭 확인해 주세요.\n
+- 스탬프 쿠폰 유효 기간: 쿠폰 발행일로부터 31일" />
+
+
+</LinearLayout>

@@ -119,6 +119,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:lineSpacingExtra="7dp"
         android:layout_margin="20dp"
         android:text="- 제조 음료 1잔 결제 시 스탬프 1개 적립됩니다.\n  (병음료, 쿠폰 사용 음료, MD 제외/ 단, 빙수 포함)\n
 - 당일에 한해 해당 매장에서 추후 적립 가능합니다.\n  (본인 결제건에 한함. 영수증 필참)\n
@@ -147,6 +148,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:lineSpacingExtra="7dp"
         android:layout_margin="20dp"
         android:text="- 스탬프 카드 완성 시 [쿠폰받기] 버튼을 누르면 쿠폰 \n   다운로드 화면으로 이동합니다.\n
 - 쿠폰을 다운로드하지 않은 상태에서는 [My쿠폰]\n   에서 쿠폰 확인 및 사용이 불가합니다.\n
