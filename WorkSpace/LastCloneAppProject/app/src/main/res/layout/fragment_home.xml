@@ -186,7 +186,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/event"
+            android:id="@+id/ln_event"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
