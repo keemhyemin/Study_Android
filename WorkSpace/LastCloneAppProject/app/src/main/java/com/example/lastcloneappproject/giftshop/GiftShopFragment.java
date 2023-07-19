@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +12,6 @@ import android.view.ViewGroup;
 import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.databinding.FragmentGiftShopBinding;
 import com.example.lastcloneappproject.home.HomeFragment;
-import com.example.lastcloneappproject.home.SliderAdapter;
-
-import java.util.ArrayList;
 
 public class GiftShopFragment extends Fragment {
 
@@ -41,7 +37,7 @@ public class GiftShopFragment extends Fragment {
 
         binding.imgvEgift.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.ln_giftshopcontainer, new EGiftFragment()).commit();
+            transaction.replace(R.id.ln_giftshopcontainer, new EGiftMenuFragment()).commit();
         });
 
 

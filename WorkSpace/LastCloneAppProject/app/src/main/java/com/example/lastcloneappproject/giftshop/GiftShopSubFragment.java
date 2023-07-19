@@ -3,6 +3,7 @@ package com.example.lastcloneappproject.giftshop;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lastcloneappproject.R;
-import com.example.lastcloneappproject.databinding.FragmentGiftShopBinding;
 import com.example.lastcloneappproject.databinding.FragmentGiftShopSubBinding;
 
 import java.util.ArrayList;
@@ -29,7 +29,8 @@ public class GiftShopSubFragment extends Fragment {
         binding.recvDrink2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         binding.imgvMore.setOnClickListener(v -> {
-
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_giftshopcontainer, new EGiftMenuFragment()).commit();
         });
 
         return binding.getRoot();
