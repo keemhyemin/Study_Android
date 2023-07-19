@@ -3,6 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 카메라의 경우 안드로이드 하드웨어이기 때문에 아래 속성을 추가해줘야한다. required가 false인 경우 미사용도 가능. -->
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera2" android:required="true"/> <!-- 전면 카메라 -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 실제로 권한 요청을 받아와야 하는 것 -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -16,6 +28,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".practice.PracActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -26,24 +41,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 카카오 소셜 로그인 용 Activity 실제로 띄우는거 x 내부적 처리에서 필요함 (카카오) -->
+        </activity> <!-- 카카오 소셜 로그인 용 Activity 실제로 띄우는거 x 내부적 처리에서 필요함 (카카오) -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakaofea29372ced23857f31828bfb55189c2" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

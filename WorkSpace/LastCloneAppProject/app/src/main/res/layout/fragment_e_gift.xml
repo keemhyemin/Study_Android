@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".giftshop.EGiftFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="#fff"
+            android:backgroundTint="#F3F3F3"
+            android:enabled="true"
+            android:text="NEW"
+            android:textColor="#707070" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="#CCCCCC" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="#fff"
+            android:backgroundTint="#F3F3F3"
+            android:text="베스트콤비네이션"
+            android:textColor="#707070" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="#CCCCCC" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="#fff"
+            android:backgroundTint="#F3F3F3"
+            android:text="밀크티"
+            android:textColor="#707070" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="#CCCCCC" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="#fff"
+            android:backgroundTint="#F3F3F3"
+            android:text="쥬얼리"
+            android:textColor="#707070" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

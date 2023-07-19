@@ -13,8 +13,8 @@ import retrofit2.http.Url;
 
 public interface RetrofitInterface {
 
-    @GET("member/{mapping}")
-    Call<String> clientGetMethod(@Path("mapping") String path, @QueryMap HashMap<String, Object> paramMap);
+    @GET("{url}")
+    Call<String> clientGetMethod(@Url String url, @QueryMap HashMap<String, Object> paramMap);
 
     @FormUrlEncoded
     @POST

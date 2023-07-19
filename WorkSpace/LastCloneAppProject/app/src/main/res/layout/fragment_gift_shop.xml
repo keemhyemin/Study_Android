@@ -50,8 +50,6 @@
         android:layout_height="2dp"
         android:background="#AAAAAA" />
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,6 +57,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imgv_egift"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
@@ -81,79 +80,11 @@
             android:src="@drawable/giftcase" />
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/ln_giftshopcontainer"
+        android:orientation="vertical"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ECECEC"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="40dp"
-                android:background="#fff"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="공차가 추천하는 선물"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recv_drink"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="30dp"
-                android:background="#fff"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="새로 나온 선물"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recv_drink2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imgv_add"
-                android:layout_width="130dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:layout_marginVertical="30dp"
-                android:src="@drawable/add" />
-        </LinearLayout>
-
-    </ScrollView>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpslider"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal" />
+        android:layout_height="0dp"/>
 
 </LinearLayout>
