@@ -23,6 +23,16 @@ public class EventMenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentEventMenuBinding.inflate(inflater, container, false);
 
+        binding.imgvBefore.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new HomeFragment()).commit();
+        });
+
+        binding.imgvHome.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new HomeFragment()).commit();
+        });
+
         binding.lnEvent.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_eventcontainer, new EventFragment()).commit();
