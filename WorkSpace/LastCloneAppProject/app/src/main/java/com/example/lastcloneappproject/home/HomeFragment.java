@@ -14,6 +14,7 @@ import com.example.lastcloneappproject.NoticeFragment;
 import com.example.lastcloneappproject.R;
 import com.example.lastcloneappproject.coupon.CouponMenuFragment;
 import com.example.lastcloneappproject.databinding.FragmentHomeBinding;
+import com.example.lastcloneappproject.event.EventMenuFragment;
 import com.example.lastcloneappproject.giftshop.GiftShopFragment;
 import com.example.lastcloneappproject.order.OrderFragment;
 import com.example.lastcloneappproject.stamp.StampMenuFragment;
@@ -58,7 +59,8 @@ public class HomeFragment extends Fragment {
         });
 
         binding.lnEvent.setOnClickListener(v -> {
-
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.ln_container, new EventMenuFragment()).commit();
         });
 
 
