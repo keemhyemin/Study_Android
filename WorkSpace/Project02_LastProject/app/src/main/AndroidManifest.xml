@@ -3,18 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 카메라의 경우 안드로이드 하드웨어이기 때문에 아래 속성을 추가해줘야한다. required가 false인 경우 미사용도 가능. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 실제로 권한 요청을 받아와야 하는 것 -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
-    <!-- 카메라의 경우 안드로이드 하드웨어이기 때문에 아래 속성을 추가해줘야한다. required가 false인 경우 미사용도 가능. -->
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
-    <uses-feature android:name="android.hardware.camera2" android:required="true"/> <!-- 전면 카메라 -->
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <!-- 실제로 권한 요청을 받아와야 하는 것 -->
-    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
-
-
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" /> <!-- 전면 카메라 -->
+    <!--API30이상에서는 queries사용해서 권한부여를 한번 더 해야함.-->
+    <queries>
+        <!-- WebView -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+        <!-- Youtube -->
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -28,13 +53,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".member.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".practice.PracActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".member.LoginActivity"
+            android:name=".file.FileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
