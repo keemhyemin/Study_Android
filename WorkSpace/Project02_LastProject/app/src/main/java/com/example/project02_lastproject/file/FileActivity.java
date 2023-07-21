@@ -1,15 +1,21 @@
 package com.example.project02_lastproject.file;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.project02_lastproject.R;
@@ -31,6 +37,9 @@ public class FileActivity extends AppCompatActivity {
     // 갤러리 또는 카메라에서 발생되는 이미지를 File 형태로 바꾸고 해당하는 파일을 Multipart 형태로 Spring 전송
     ActivityFileBinding binding;
     private final int REQ_GALLERY = 1000;
+    ActivityResultLauncher<Intent> launcher; // onCreate에서 초기화하면 오류 발생
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +50,16 @@ public class FileActivity extends AppCompatActivity {
             showDialog();
         });
     }
+
     public void showDialog() {
         String[] dialog_item = {"갤러리", "카메라"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("사진 업로드 방식");
         builder.setSingleChoiceItems(dialog_item, -1, (dialog, i) -> {
-            if (dialog_item[i].equals("갤러리")){
+            if (dialog_item[i].equals("갤러리")) {
                 showGallery();
-            }else if(dialog_item[i].equals("카메라")) {
-                // 카메라 로직
+            } else if (dialog_item[i].equals("카메라")) {
+                showCamera();
             }
             dialog.dismiss();
         });
@@ -57,7 +67,52 @@ public class FileActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void showGallery(){
+    @Override
+    protected void onStart() {
+        super.onStart();
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                // 액티비티(카메라 액티비티)가 종료되면 콜백으로 데이터를 받는 부분 기존(onActivityResult 메소드가 실행되었고 현재는 해당 메소드)
+                Glide.with(FileActivity.this).load(camera_uri).into(binding.imgv);
+                File file = new File(getRealPath(camera_uri));
+                if (file != null) {
+                    Toast.makeText(FileActivity.this, "수업끝", Toast.LENGTH_SHORT).show();
+
+                    RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), file);
+                    MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", "test.jpg", fileBody);
+                    RetrofitInterface api = new RetrofitClient().getRetrofit().create(RetrofitInterface.class);
+                    api.clientSendFile("file.f", new HashMap<>(), filePart).enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            t.getMessage();
+                        }
+                    });
+                }
+            }
+        });
+
+    }
+
+    Uri camera_uri = null;
+
+    public void showCamera() {
+        // ContentResolver(). 앱 --> 컨텐트리졸버(작업자) --> 미디어 저장소
+//        ContentValues values = new ContentValues();
+//        values.describeContents();
+        camera_uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new ContentValues());
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, camera_uri);
+        launcher.launch(cameraIntent);
+
+    }
+
+    public void showGallery() {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_PICK);
@@ -71,7 +126,7 @@ public class FileActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQ_GALLERY && resultCode == RESULT_OK) {
+        if (requestCode == REQ_GALLERY && resultCode == RESULT_OK) {
             // 갤러리 액티비티가 종료되었다. (사용자가 사진을 선택했는지?)
             Log.d("갤러리", "onActivityResult: " + data.getData());
             Log.d("갤러리", "onActivityResult: " + data.getData().getPath());
@@ -106,7 +161,7 @@ public class FileActivity extends AppCompatActivity {
         String[] proj = {MediaStore.Images.Media.DATA}; // "_Data"
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Cursor cursor = getContentResolver().query(contentUri, proj, null, null);
-            if(cursor.moveToFirst()) {
+            if (cursor.moveToFirst()) {
                 int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
                 res = cursor.getString(column_index);
             }

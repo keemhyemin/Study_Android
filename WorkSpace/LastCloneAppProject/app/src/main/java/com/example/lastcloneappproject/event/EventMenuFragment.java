@@ -3,6 +3,7 @@ package com.example.lastcloneappproject.event;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -23,6 +24,9 @@ public class EventMenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentEventMenuBinding.inflate(inflater, container, false);
 
+        FragmentTransaction mainTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        mainTransaction.replace(R.id.rl_container, new BannerFragment()).commit();
+
         binding.imgvBefore.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
@@ -33,10 +37,16 @@ public class EventMenuFragment extends Fragment {
             transaction.replace(R.id.ln_container, new HomeFragment()).commit();
         });
 
-        binding.lnEvent.setOnClickListener(v -> {
+        binding.btn1.setOnClickListener(v -> {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.ln_eventcontainer, new EventFragment()).commit();
+            transaction.replace(R.id.rl_container, new BannerFragment()).commit();
         });
+
+        binding.btn2.setOnClickListener(v -> {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.rl_container, new NewsFragment()).commit();
+        });
+
 
         return binding.getRoot();
     }

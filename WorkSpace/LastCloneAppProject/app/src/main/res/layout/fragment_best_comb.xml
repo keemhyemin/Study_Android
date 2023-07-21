@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    android:layout_marginHorizontal="20dp"
+    android:background="#FEFEFE"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".event.NewsFragment">
-
-    <View
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#AFAFAF" />
+    tools:context=".giftshop.BestCombFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recv_news"
+        android:id="@+id/recv_best"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
