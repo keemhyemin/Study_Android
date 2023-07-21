@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:background="#FEFEFE"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE"
-    android:orientation="vertical"
     tools:context=".event.EventMenuFragment">
 
     <RelativeLayout
@@ -59,12 +60,12 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn1"
+            android:enabled="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#fff"
             android:backgroundTint="#F3F3F3"
-            android:enabled="true"
             android:text="이벤트"
             android:textColor="#707070" />
 
@@ -109,10 +110,10 @@
                 android:orientation="horizontal">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_title"
@@ -123,25 +124,24 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/tv_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_title"
-                        android:layout_marginVertical="10dp"
                         android:text="기간   2023.07.21~2023.07.21" />
                 </RelativeLayout>
 
                 <ImageView
+                    android:layout_marginLeft="15dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
                     android:src="@drawable/eventimg" />
             </LinearLayout>
-
             <View
+                android:background="#AFAFAF"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#AFAFAF" />
+                android:layout_height="1dp"/>
         </LinearLayout>
     </LinearLayout>
 
